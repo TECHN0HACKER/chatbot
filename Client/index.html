@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoxBot</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column; /* Ensure the body is a flex container */
+    min-height: 100vh; /* Minimum height of the body to prevent collapse */
+  }
+  .chat-container {
+    height: calc(100vh - 5px);
+    width: calc(100vw - 2px);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  .chat-messages {
+    height: calc(87vh - 1px);
+    overflow-y: auto;    
+    padding: 10px;
+  }
+  .chat-message {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .chat-messages .chat-message.user-message {
+  background-color: #f2f2f2;
+  }
+  .chat-messages .chat-message.server-message {
+  background-color: #777777;
+  }
+  .input-container {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    width: 100vw;
+  }
+  .input-field {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    resize: vertical;
+    transition: max-height 0.2s;
+    height: 22px;
+    min-height: 22px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-left: 45px;
+  }
+  .send-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .voice-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #f5d1c9;
+    background-image: url('https://icones.pro/wp-content/uploads/2021/12/icone-de-microphone-rose.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<audio id="notificationSound" src="notification.wav"></audio>
+<div class="chat-container" id="chatContainer">
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="input-container" id="inputContainer">
+    <button class="voice-button" id="voiceButton" title="Send voice message"></button>
+    <textarea class="input-field" id="messageInput" placeholder="Type your message..."></textarea>
+    <button class="send-button" id="sendButton">Send</button>
+  </div>
+</div>
+<script>
+  const messageInput = document.getElementById("messageInput");
+  const sendButton = document.getElementById("sendButton");
+  const chatMessages = document.getElementById("chatMessages");
+  const voiceButton = document.getElementById("voiceButton");
+  const notificationSound = document.getElementById("notificationSound");
+  const deviceId = getCookie("info");
+  if (!deviceId) {
+    const randomDeviceId = generateRandomDeviceId();
+    setCookie("info", randomDeviceId, 365);
+  }
+  const socket = new WebSocket('ws://localhost:9000');
+  socket.onopen = function (event) {
+    const deviceId = getCookie("info");
+    socket.send(deviceId);
+    //alert(deviceId);
+  };
+  var x = true;
+  var y = true;
+  var a = true;
+  var z = false;
+  let recognition = null;
+  recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  recognition.onresult = (event) => {
+    const transcript = event.results[event.results.length - 1][0].transcript;
+    messageInput.value = transcript;
+  };
+  recognition.onerror = (event) => {
+    alert("Speech recognition error:", toString(event.error()));
+  };
+
+  sendButton.addEventListener("click", () => {
+    const message = messageInput.value;
+    if (message.trim() !== "") {
+      sendMessage(message);
+      messageInput.value = "";
+      messageInput.style.height = "auto";
+    }
+    if (y===false) {
+      recognition.stop();
+      voiceButton.style.backgroundImage = "url('microphone.png')";
+      voiceButton.title = "Send voice message";
+      y=true;
+    }
+  });
+
+  voiceButton.addEventListener("click", () => {
+    if (y===true) {
+      voiceButton.style.backgroundImage = "url('cancel.png')"
+      voiceButton.title = "Cancel";
+      recognition.start();
+      y = false;
+    } else {
+      recognition.stop();
+      voiceButton.style.backgroundImage = "url('microphone.png')";
+      voiceButton.title = "Send voice message";
+      y=true;
+    }
+  });
+
+  messageInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      sendMessage(messageInput.value);
+      if (x===true) {
+        messageInput.value = "";
+        messageInput.style.height = "auto";
+      }
+      if (y===false) {
+      recognition.stop();
+      voiceButton.style.backgroundImage = "url('https://icones.pro/wp-content/uploads/2021/12/icone-de-microphone-rose.png')";
+      voiceButton.title = "Send voice message";
+      y=true;
+      }
+    }
+  });
+
+  messageInput.addEventListener("input", () => {
+    const chatContainer = document.getElementById("chatContainer");
+    const inputContainer = document.getElementById("inputContainer")
+    //const newHeight = Math.max(messageInput.scrollHeight, 60);
+    messageInput.style.height = "auto";
+    messageInput.style.height = (messageInput.scrollHeight) - 27 + "px";
+    const computedStyle = window.getComputedStyle(chatContainer);
+    const inp = window.getComputedStyle(inputContainer);
+    const chatMessagesHeight = parseInt(computedStyle.getPropertyValue("height"), 10);
+    const inpHeight = parseInt(inp.getPropertyValue("height"), 10);
+    const newChatMessagesHeight = chatMessagesHeight - inpHeight - 40;
+    chatMessages.style.height = newChatMessagesHeight + "px";
+    //alert(chatMessages.style.height.toString());
+    //messageInput.style.height = "70px";
+  });
+
+async function sendMessage(message) {
+  if (x === true) {
+    messageInput.value = "";
+    const chatMessage = document.createElement("div");
+    chatMessage.classList.add("chat-message", "user-message");
+    chatMessage.innerHTML = message.replace(/\n/g, "<br>");
+    chatMessages.appendChild(chatMessage);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    if (chatMessage.innerHTML !== "*-*-*END_MESSAGE*-*-*") {
+      socket.send(chatMessage.innerHTML);
+    } else {
+      alert("this text is not allowed")
+    }
+    sendButton.style.backgroundColor = "#0056b3";
+    sendButton.style.cursor = "not-allowed";
+    sendButton.disabled = true;
+    x = false;
+  }
+}
+
+socket.onmessage = function (event) {
+  if (z === false) {
+    sendButton.style.backgroundColor = "#0056b3";
+    sendButton.style.cursor = "not-allowed";
+    sendButton.disabled = true;
+    const comment = event.data;
+    x = false;
+    if (a === true && event.data !== "*-*-*END_MESSAGE*-*-*") {
+      const chatMessage = document.createElement("div");
+      chatMessage.classList.add("chat-message", "user-message");
+      chatMessage.innerHTML = processMessage(comment);
+      chatMessages.appendChild(chatMessage);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      a = false;
+    } else if (a === false && event.data !== "*-*-*END_MESSAGE*-*-*") {
+      const chatMessage = document.createElement("div");
+      chatMessage.classList.add("chat-message", "server-message");
+      chatMessage.innerHTML = processMessage(comment);
+      chatMessages.appendChild(chatMessage);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      a = true;
+    } else {
+      z = true;
+      x = true;
+      sendButton.style.backgroundColor = "#007bff";
+      sendButton.style.cursor = "pointer";
+      sendButton.disabled = false;
+    }
+  } else {
+    x = true;
+    const comment = event.data;
+    const chatMessage = document.createElement("div");
+    chatMessage.classList.add("chat-message", "server-message");
+    chatMessage.innerHTML = processMessage(comment);
+    chatMessages.appendChild(chatMessage);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    sendButton.style.backgroundColor = "#007bff";
+    sendButton.style.cursor = "pointer";
+    sendButton.disabled = false;
+    notificationSound.play();
+  }
+};
+
+function processMessage(message) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const messageWithLinks = message.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
+  
+  return messageWithLinks;
+}
+
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+function generateRandomDeviceId() {
+  return Math.floor(Math.random() * 1000000).toString();
+}
+</script>
+</body>
+</html>
