@@ -1,0 +1,393 @@
+{"intents": [
+	{
+		"tag": "greetings",
+		"patterns": ["hello", "hey", "hi", "good day", "Greetings", "yo", "what's up?", "how is it going"],
+		"responses": ["Hello!", "Hey!", "what can I do for you"]
+	},
+	{
+		"tag": "name",
+		"patterns": ["whats yours name", "can you tell me your name", "who are you"],
+		"responses": ["My name is voxbot", "i am voxbot", "VoxBot here at your service"]
+	},
+	{
+		"tag": "status",
+		"patterns": ["how are you", "hru", "wsp", "wsg"],
+		"responses": ["I am doing good", "Great", "I'm fine", "I'm alright but what about you?"]
+	},
+	{
+		"tag":"comparative education",
+		"patterns":["what is comparative education ","what is meant by comparitive education","define comparitive education"],
+		"responses":["Comparative education is a discipline in the social sciences thatentails the scrutiny and evaluation of different educational systems,such asthose in various countries. Professionals in this area of endeavor areabsorbed in advancing evocative terminologies and guidelines foreducation worldwide , you mau check the following links for the same.....'https://link.springer.com/referenceworkentry/10.1007/978-3-319-31816-5_1197-1#:~:text=Comparative%20studies%20are%20investigations%20to,detect%20similarities%20and%2For%20differences.you can check the following study materials- 'https://writingcenter.fas.harvard.edu/pages/how-write-comparative-analysis','https://www.brandonu.ca/rdi/files/2017/07/RDI-Comparative-Research.pdf'",
+		"The study of comparative education is a field in the social sciences that involves examining and comparing different educational systems, such as those in various countries. Experts in this domain are interested in developing meaningful concepts and guidelines for education worldwide, check the following websites for more information- https://link.springer.com/referenceworkentry/10.1007/978-3-319-31816-5_1197-1#:~:text=Comparative%20studies%20are%20investigations%20to,detect%20similarities%20and%2For%20differences.you can check the following study materials- 'https://writingcenter.fas.harvard.edu/pages/how-write-comparative-analysis','https://www.brandonu.ca/rdi/files/2017/07/RDI-Comparative-Research.pdf'"]
+	},
+	{
+		"tag":"indian space program",
+		"patterns":["give me a breif about the indian space program","what is the indian space program","india's space development program","what is isro"],
+		"responses":["The Indian space program is a national effort to explore and utilize the outer space for various scientific, technological and social purposes. The program is led by the Indian Space Research Organisation (ISRO), which is responsible for designing, developing and launching satellites, rockets, probes and human missions. you may refer the following links -'https://www.isro.gov.in/','https://www.isro.gov.in/Chandrayaan3.html','https://en.wikipedia.org/wiki/ISRO' 'https://timesofoman.com/article/135428-pragyan-rover-confirms-presence-of-sulphur-on-lunar-surface-isro'",
+		"The Indian space program is a national effort to explore and utilize the outer space for various scientific, technological and social purposes. The program is led by the Indian Space Research Organisation (ISRO), which is responsible for designing, developing and launching satellites, rockets, probes and human missions. you may refer the following links -'https://www.isro.gov.in/','https://www.isro.gov.in/Chandrayaan3.html','https://en.wikipedia.org/wiki/ISRO' 'https://timesofoman.com/article/135428-pragyan-rover-confirms-presence-of-sulphur-on-lunar-surface-isro'"]
+	},
+	{
+		"tag":"covid-19 and learning",
+		"patterns":["what is the impact of covid-19 on education","effect of covid 19 on student achivement","covid-19 and its impact"],
+		"responses":["Most students somewhat or strongly agreed that online learning during COVID-19 negatively affected their stress levels (55 of 95; 58%) and mental health (54 of 95; 57%), and 46% (44 of 95) somewhat or strongly agreed that online learning affected their physical health,Check the following links to.....'https://timesofindia.indiatimes.com/readersblog/shivangipandey/online-education-and-its-consequences-due-to-covid-19-43463/','https://teachonline.ca/tools-trends/covid-19-and-the-impact-on-online-learning','https://www.weforum.org/agenda/2020/04/coronavirus-education-global-covid19-online-digital-learning/",
+					"COVID-19 has disrupted the education of millions of children around the world, forcing them to rely on remote and digital learning methods that may not be accessible or effective for all. The pandemic has also widened the existing inequalities and gaps in learning outcomes among different groups of students, especially the most vulnerable and marginalized ones,FIND OUT MORE.....'https://timesofindia.indiatimes.com/readersblog/shivangipandey/online-education-and-its-consequences-due-to-covid-19-43463/','https://teachonline.ca/tools-trends/covid-19-and-the-impact-on-online-learning','https://www.weforum.org/agenda/2020/04/coronavirus-education-global-covid19-online-digital-learning/"]		
+	},
+	{
+		"tag": "standardized testing and alternative assessments",
+		"patterns":["The pros and cons of standardized testing and alternative assessments","standard test vs alternate test","which is better standard testing or alternate testing","what is alternate testing"],
+		"responses":["Standardized testing and alternative assessment are two methods of evaluating students learning. Standardized testing is objective and consistent, but stressful and limiting; alternative assessment is authentic and meaningful, but time-consuming and subjective FOR MORE INFO -... 'https://www.uopeople.edu/blog/alternatives-to-standardized-testing/','https://rethinkingschools.org/articles/alternatives-to-standardized-tests/','https://files.eric.ed.gov/fulltext/EJ1101956.pdf','https://noahwebstereducationalfoundation.org/4-alternatives-to-standardized-testing/'",
+		"Two ways to measure students learning are standardized testing and alternative assessment. Standardized testing provides a fair and reliable evaluation, but it can also cause pressure and limit creativity; alternative assessment allows students to show their skills and knowledge in realistic and relevant contexts, but it can also be demanding and biased.,check out the following links-...'https://www.uopeople.edu/blog/alternatives-to-standardized-testing/','https://rethinkingschools.org/articles/alternatives-to-standardized-tests/','https://files.eric.ed.gov/fulltext/EJ1101956.pdf','https://noahwebstereducationalfoundation.org/4-alternatives-to-standardized-testing/' "]
+
+	  },
+	{
+		"tag": "social media effect on children",
+		"patterns":["role of social media in education and its effects on students mental health","hows does social media effect children","social media and problem to study"],
+		"responses":["Social media can be a useful tool for education, as it can facilitate communication, collaboration, and information sharing among students and teachers. However, social media can also have negative effects on students mental health, such as increased stress, anxiety, depression, and cyberbullying. follow below for more details'https://www.unicef.org/end-violence/how-to-stop-cyberbullying', 'https://en.wikipedia.org/wiki/Cyberbullying', 'https://childmind.org/article/how-using-social-media-affects-teenagers/', 'https://www.linkedin.com/pulse/impact-social-media-youth-mohammad-shayan'",
+		"Social media can enhance education by enabling students and teachers to communicate, collaborate, and access information. However, social media can also harm students mental health by causing stress, anxiety, depression, and cyberbullying,'https://www.unicef.org/end-violence/how-to-stop-cyberbullying', 'https://en.wikipedia.org/wiki/Cyberbullying', 'https://childmind.org/article/how-using-social-media-affects-teenagers/', 'https://www.linkedin.com/pulse/impact-social-media-youth-mohammad-shayan'"]	
+
+	},
+	{
+		"tag": "stem education",
+		"patterns":["what is stem education","how is stem education different","new trend in education system"],
+		"responses":["STEM education is a teaching approach that integrates science, technology, engineering and math. It aims to prepare students for the challenges and opportunities of the 21st century by developing their skills and knowledge in these fields,'https://www.livescience.com/43296-what-is-stem-education.html','https://www.britannica.com/topic/STEM-education','https://stemedresearch.siu.edu/what-is-stem-education/', 'https://www.stem.org.uk/'",
+		"STEM education (Science, Technology, Engineering, and Mathematics) emphasizes an integrated approach to learning by combining these disciplines, fostering critical thinking, problem-solving, and innovation. It equips students with skills that are essential for navigating the modern world and contributing to advancements in various fields.,'https://www.livescience.com/43296-what-is-stem-education.html','https://www.britannica.com/topic/STEM-education','https://stemedresearch.siu.edu/what-is-stem-education/', 'https://www.stem.org.uk/'"]
+	},
+	{
+		"tag": "roman empire",
+		"patterns":["describe the roman empire","short note on roman empire","explain the influence of roman empire on modern life"],
+		"responses":["The rise and fall of the Roman Empire. You can learn about how Rome became a powerful and influential civilization in the ancient world, and how it eventually collapsed due to internal and external factors. You can also explore the legacy and impact of Roman culture, law, politics, religion, and art on later civilizations. Some sources you can use are -- 'https://en.wikipedia.org/wiki/Roman_Empire','https://www.history.com/topics/ancient-rome/ancient-rome','https://www.britannica.com/place/ancient-Rome','https://www.thoughtco.com/what-was-the-fall-of-rome-112688' ",
+		"Roman glory and downfall. You can discover how Rome rose to be a mighty and influential empire in the ancient world, and how it crumbled under internal and external pressures. You can also examine the heritage and influence of Roman culture, law, politics, religion, and art on later civilizations....check on for more SOURCES -'https://en.wikipedia.org/wiki/Roman_Empire','https://www.history.com/topics/ancient-rome/ancient-rome','https://www.britannica.com/place/ancient-Rome','https://www.thoughtco.com/what-was-the-fall-of-rome-112688' "]
+	},
+	{
+		"tag": "life on earth",
+		"patterns":["The origin and evolution of life on Earth. You can learn about how life emerged from simple molecules, and how it diversified and adapted to different environments over billions of years. You can also explore the evidence and mechanisms of evolution, such as fossils, DNA, natural selection, and speciation. Some sources you can use are 'https://en.wikipedia.org/wiki/History_of_life','https://www.newscientist.com/article/dn17453-timeline-the-evolution-of-life/','https://humanoriginproject.com/evolution-and-timeline-of-life-on-earth/','https://www.science.org/doi/10.1126/science.aam8327'",
+		"Life origin and diversity on Earth. You can find out how life arose from simple molecules, and how it branched and adapted to various environments over billions of years. You can also investigate the clues and processes of evolution, such as fossils, DNA, natural selection, and speciation. CHECK OUT THE FOLLOWING LINKS FOR MORE - 'https://en.wikipedia.org/wiki/History_of_life','https://www.newscientist.com/article/dn17453-timeline-the-evolution-of-life/','https://humanoriginproject.com/evolution-and-timeline-of-life-on-earth/','https://www.science.org/doi/10.1126/science.aam8327'"]
+
+	},
+	{
+		"tag":"longest river",
+		"patterns":["name the longest river on the planet","how long is nile river","details about nile river"],
+		"responses":["The longest river in the world is the Nile, which flows through 11 countries in Africa, from Lake Victoria to the Mediterranean Sea. The Nile is about 6,650 kilometers long and has two major tributaries: the White Nile and the Blue Nile.check for more'https://en.wikipedia.org/wiki/Nile','https://education.nationalgeographic.org/resource/nile-river/','https://www.journeytoegypt.com/en/blog/nile-river','https://www.history.com/news/ancient-egypt-nile-river'",
+		"The Nile, the river of life, flows through Africas lands From Victorias lake to the Mediterranean sands Its length is unmatched, six thousand six hundred and fifty Its waters are split by two branches, the White and the Blue, so mighty, check out for more 'https://en.wikipedia.org/wiki/Nile','https://education.nationalgeographic.org/resource/nile-river/','https://www.journeytoegypt.com/en/blog/nile-river','https://www.history.com/news/ancient-egypt-nile-river'"]
+		
+	},
+	{
+		"tag":"electric field",
+		"patterns":["what is an electric field","define electric field","state electric field"],
+		"responses":["An electric field is a region of space where an electric charge experiences a force due to the presence of other electric charges. The electric field is measured in units of newtons per coulomb or volts per meter, and it can be represented by vectors or lines of force.'https://en.wikipedia.org/wiki/Electric_field','http://hyperphysics.phy-astr.gsu.edu/hbase/electric/elefie.html','https://www.physicsclassroom.com/class/circuits/Lesson-1/Electric-Field-and-the-Movement-of-Charge','https://www.thoughtco.com/electric-field-4174366'",
+	"an electric field is the region around source charge where the force of attraction or repulsion can be experieced,'unit is Newton/Comlomb,(vector quantity) direction is from positive to negative end , can be represtened by lines of force 'https://en.wikipedia.org/wiki/Electric_field','http://hyperphysics.phy-astr.gsu.edu/hbase/electric/elefie.html','https://www.physicsclassroom.com/class/circuits/Lesson-1/Electric-Field-and-the-Movement-of-Charge','https://www.thoughtco.com/electric-field-4174366' "]
+
+	},
+	{
+		"tag":"hadron collider",
+		"patterns":["what is particle collider","what is hadron collider","largest hadron collider in words"],
+		"responses":["A hadron collider is a device that uses powerful magnets to accelerate subatomic particles, such as protons or electrons, to very high speeds and then smash them together. The hadron collider can create new particles and reveal the secrets of matter and energy.Large Hadron Collider (LHC) in Switzerland, which is the largest and most powerful particle accelerator in the world.'https://home.cern/science/accelerators/large-hadron-collider',https://en.wikipedia.org/wiki/Large_Hadron_Collider','https://www.nature.com/articles/d41586-022-01388-6','https://phys.org/news/2023-08-neutrinos-cern-large-hadron-collider.html'",
+	"A device that uses strong magnets to speed up tiny particles, such as protons or electrons, and then crash them into each other is called a hydron collider. The hydron collider can make new particles and uncover the mysteries of matter and energy. The Large Hadron Collider (LHC) in Switzerland is one example of a hydron collider, and it is the biggest and most powerful particle accelerator in the world.'https://home.cern/science/accelerators/large-hadron-collider',https://en.wikipedia.org/wiki/Large_Hadron_Collider','https://www.nature.com/articles/d41586-022-01388-6','https://phys.org/news/2023-08-neutrinos-cern-large-hadron-collider.html' "]
+
+	},
+	{
+		"tag": "weather_patterns",
+		"patterns": ["how do weather patterns form?", "what causes different weather conditions?", "understanding weather forecasting."],
+		"responses": ["Weather patterns are influenced by various factors, including air pressure and temperature. Discover how they form and affect our climate: 'https://www.aljazeera.com/news/2023/6/8/el-nino-under-way-raising-fears-of-extreme-weather-patterns','https://www.epa.gov/climate-indicators/weather-climate','https://www.noaa.gov/education/resource-collections/weather-atmosphere/weather-systems-patterns','https://education.nationalgeographic.org/resource/all-about-climate/'",
+	"Various factors, such as air pressure and temperature, affect how weather patterns form and shape our climate. Learn about the processes and impacts of these weather patterns.'https://www.aljazeera.com/news/2023/6/8/el-nino-under-way-raising-fears-of-extreme-weather-patterns','https://www.epa.gov/climate-indicators/weather-climate','https://www.noaa.gov/education/resource-collections/weather-atmosphere/weather-systems-patterns','https://education.nationalgeographic.org/resource/all-about-climate/'"]
+	
+	},
+	{
+		"tag": "programming_languages",
+		"patterns": ["popular programming languages.","choosing the right programming language.","programming for beginners.","programming"],
+		"responses": ["There are many programming languages, each suited for different tasks. The choice depends on your goals and interests. Beginners often start with languages like Python. Explore further: 'https://www.python.org/about/'. Programming languages like JavaScript, Java, and C++ are widely used in web development, software engineering, and game development. Consider your project requirements when choosing a language. Learn more: 'https://www.simplilearn.com/best-programming-languages-start-learning-today-article.','https://hackr.io/blog/best-programming-languages-to-learn','https://www.coursera.org/articles/popular-programming-languages'",		
+	"So many languages, so little time. What do you want to do? Make a website, an app, or a game? Python is easy-peasy, but JavaScript, Java, and C++ are also cool. Pick a language that suits your project. Or flip a coin, check out for more 'https://www.python.org/about/','https://www.simplilearn.com/best-programming-languages-start-learning-today-article.','https://hackr.io/blog/best-programming-languages-to-learn','https://www.coursera.org/articles/popular-programming-languages' "]
+	
+	},
+	{
+		"tag": "introduction",
+		"patterns": ["Tell me about yourself",
+		"Introduce yourself",
+		"Who are you",
+		"What's your purpose"],
+		"responses": ["I am a chatbot named VoxBot. I am designed to provide information, answer questions, and engage in conversations on various topics.",
+		"I'm an educational chatbot created to assist with educational queries and provide informative responses.",
+		"I'm an AI chatbot programmed to offer assistance and knowledge on a wide range of subjects.",
+		"My purpose is to help users by answering questions and providing useful information."
+		]
+	},
+	{
+		"tag": "features",
+		"patterns": ["What are your features",
+		"Explain your features",
+		"List your capabilities",
+		"Tell me about your functions"],
+		"responses": [
+		  "My features include answering questions, providing information, and engaging in interactive conversations.",
+		  "I can answer questions, provide detailed information, and have natural discussions with users.",
+		  "I'm capable of performing functions such as answering queries, offering information, and engaging in meaningful conversations.",
+		  "My functions include answering questions, assisting with tasks, and maintaining engaging conversations."
+		]
+	},
+	{
+		"tag": "working_principle",
+		"patterns": [
+		  "How do you work",
+		  "Explain your operation",
+		  "What's your working principle",
+		  "How does your system function"
+		],
+		"responses": [
+		  "I work by analyzing user messages, identifying their intent, and providing relevant responses based on predefined knowledge.",
+		  "My operation involves understanding user queries, predicting their intent, and generating appropriate responses.",
+		  "I function by processing user inputs, recognizing their intent, and offering informative replies based on my training.",
+		  "My system operates by receiving user queries, analyzing them, and generating appropriate responses from a database of knowledge."
+		]
+	},
+	{
+		"tag": "capabilities",
+		"patterns": [
+		  "What can you do",
+		  "List your capabilities",
+		  "Tell me about your skills",
+		  "What tasks can you handle"
+		],
+		"responses": [
+		  "I can handle a wide range of tasks, from answering general knowledge questions to assisting with specific requests.",
+		  "My capabilities include answering questions, providing detailed information, and engaging in meaningful conversations.",
+		  "I have the capability to provide information, answer queries, and engage in discussions on numerous topics.",
+		  "I'm skilled at providing information, answering questions, and assisting with various tasks as needed."
+		]
+	},
+	{
+		"tag": "data_transfer",
+		"patterns": [
+		  "How does this transfer data",
+		  "Explain the data transfer process",
+		  "What's the mechanism for data exchange",
+		  "Tell me about your data transfer"
+		],
+		"responses": [
+		  "Data transfer occurs when you send a message, and I retrieve information to formulate a response.",
+		  "The data transfer process involves sending your query to my database, where I retrieve relevant information to answer your question.",
+		  "Data exchange happens when you input a question, and I fetch the necessary data to provide you with a response.",
+		  "When you ask a question, I retrieve data from my knowledge base to generate a meaningful response."
+		]
+	},
+	{
+		"tag": "voice_interaction",
+		"patterns": [
+		  "Can you interact through voice",
+		  "How does your voice interaction work",
+		  "Tell me about voice commands",
+		  "Explain your voice interaction feature"
+		],
+		"responses": [
+		  "Yes, I can interact through voice commands. You can click the microphone icon and speak your query.",
+		  "Voice interaction works by processing spoken commands. Just click the microphone and speak your question.",
+		  "Voice commands enable hands-free interaction. Click the microphone, ask your question, and I'll respond accordingly.",
+		  "To use voice interaction, click the microphone icon, speak your query, and I'll provide a spoken response."
+		]
+	},
+	{
+		"tag": "future_development",
+		"patterns": [
+		  "What's in store for the future",
+		  "Tell me about your future development plans",
+		  "How will you evolve",
+		  "Do you have any upcoming features"
+		],
+		"responses": [
+		  "In the future, we plan to expand our capabilities, add new features, and provide even more insightful responses.",
+		  "Our future development includes enhancing our knowledge base, improving response accuracy, and adding innovative features.",
+		  "We are constantly evolving to offer better services. Expect more features and improved performance in the future.",
+		  "Stay tuned for exciting updates! We have plans to enhance our functionality and provide more valuable assistance."
+		]
+	},
+	{
+		"tag": "websockets",
+		"patterns": ["what is websockets", "what module do you use for transferring data?", "what does websockets do", "websockets"],
+		"responses": ["websockets is a module that is used for transferring data as well as establishing a connection.\nyou can learn more about websockets at: https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http, https://websockets.readthedocs.io/en/stable/, https://en.wikipedia.org/wiki/WebSocket, https://www.wallarm.com/what/a-simple-explanation-of-what-a-websocket-is", "websockets is used by me for communication between you and server\nyou can learn more about websockets at: https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http, https://websockets.readthedocs.io/en/stable/, https://en.wikipedia.org/wiki/WebSocket, https://www.wallarm.com/what/a-simple-explanation-of-what-a-websocket-is", "websockets is available in both javascript and python as a module\nyou can learn more about websockets at: https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http, https://websockets.readthedocs.io/en/stable/, https://en.wikipedia.org/wiki/WebSocket, https://www.wallarm.com/what/a-simple-explanation-of-what-a-websocket-is", "websockets is used by me specifically in an async function where the client send server a connection request and similarly the server accepts it in an async function as well\nyou can learn more about websockets at: https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http, https://websockets.readthedocs.io/en/stable/, https://en.wikipedia.org/wiki/WebSocket, https://www.wallarm.com/what/a-simple-explanation-of-what-a-websocket-is"]
+	},
+	{
+		"tag": "machine_learning",
+		"patterns": [
+		  "Explain machine learning",
+		  "How does machine learning work?",
+		  "Tell me about AI and machine learning",
+		  "What is the role of machine learning in your functionality?"
+		],
+		"responses": [
+		  "Machine learning is a field of artificial intelligence (AI) that focuses on the development of algorithms and models that enable computers to learn from and make predictions or decisions based on data.\nYou can know more about it at: https://en.wikipedia.org/wiki/Machine_learning, https://www.ibm.com/topics/machine-learning, https://www.techtarget.com/searchenterpriseai/definition/machine-learning-ML, https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained",
+		  "Machine learning works by training models on data, allowing them to identify patterns and make predictions or decisions without being explicitly programmed.\nYou can know more about it at: https://en.wikipedia.org/wiki/Machine_learning, https://www.ibm.com/topics/machine-learning, https://www.techtarget.com/searchenterpriseai/definition/machine-learning-ML, https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained",
+		  "AI and machine learning play a vital role in enhancing my functionality, enabling me to understand user queries and provide relevant responses.\nYou can know more about it at: https://en.wikipedia.org/wiki/Machine_learning, https://www.ibm.com/topics/machine-learning, https://www.techtarget.com/searchenterpriseai/definition/machine-learning-ML, https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained",
+		  "Machine learning is a key component that helps me analyze user inputs, predict their intent, and generate appropriate responses.\nYou can know more about it at: https://en.wikipedia.org/wiki/Machine_learning, https://www.ibm.com/topics/machine-learning, https://www.techtarget.com/searchenterpriseai/definition/machine-learning-ML, https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained"
+		]
+	},
+	{
+		"tag": "user_interaction",
+		"patterns": [
+		  "How do you interact with users?",
+		  "Explain user interaction",
+		  "What methods do you use to engage with users?",
+		  "Tell me about your conversational abilities"
+		],
+		"responses": [
+		  "I interact with users by processing their messages, identifying intent, and responding with relevant information or questions.",
+		  "User interaction involves analyzing user queries, understanding their needs, and providing informative responses in a conversational manner.",
+		  "I engage with users through natural language understanding, enabling meaningful conversations and providing assistance based on their queries.",
+		  "My conversational abilities allow me to maintain engaging interactions with users, addressing their inquiries and facilitating discussions."
+		]
+	},
+	{
+		"tag": "knowledge_base",
+		"patterns": [
+		  "How do you access information?",
+		  "Tell me about your knowledge base",
+		  "What is your source of information?",
+		  "Explain where you get your data"
+		],
+		"responses": [
+		  "I access information from a structured knowledge base that contains a wide range of topics and data points.",
+		  "My knowledge base serves as a reference for answering user queries, providing accurate and up-to-date information.",
+		  "I source my data from reputable and trusted sources, ensuring the reliability of the information I provide.",
+		  "The knowledge base is regularly updated to include the latest information and insights, enhancing the quality of my responses."
+		]
+	},
+	{
+		"tag": "renewable_resources",
+		"patterns": [
+		  "What are renewable energy resources?",
+		  "List examples of sustainable energy resources.",
+		  "How can we harness renewable resources?",
+		  "Can you name some sources of clean and reusable energy?"
+		],
+		"responses": [
+		  "Renewable energy sources are types of energy derived from naturally occurring processes that are continuously replenished. Examples include solar power, wind energy, hydroelectric power, and geothermal energy. These sources are considered sustainable because they have minimal environmental impact and can be used indefinitely.\nfor more info check out these links: https://www.un.org/en/climatechange/what-is-renewable-energy, https://www.edfenergy.com/energywise/renewable-energy-sources, https://www.energy.gov/eere/renewable-energy, https://www.eia.gov/energyexplained/renewable-sources",
+		  "In the realm of sustainable energy, renewable energy sources are the stars. They encompass a variety of options such as solar energy, wind power, hydroelectricity, and geothermal energy. These sources are crucial in reducing greenhouse gas emissions and promoting a cleaner, greener future.\nfor more info check out these links: https://www.un.org/en/climatechange/what-is-renewable-energy, https://www.edfenergy.com/energywise/renewable-energy-sources, https://www.energy.gov/eere/renewable-energy, https://www.eia.gov/energyexplained/renewable-sources",
+		  "Renewable energy sources, often referred to as clean energy, are those that can be naturally replenished. Some notable examples include solar panels, which harness the power of the sun, wind turbines that generate electricity from the wind's kinetic energy, hydroelectric dams utilizing flowing water, and geothermal systems tapping into Earth's internal heat. These sources play a pivotal role in our transition to more sustainable and eco-friendly energy solutions.\nfor more info check out these links: https://www.un.org/en/climatechange/what-is-renewable-energy, https://www.edfenergy.com/energywise/renewable-energy-sources, https://www.energy.gov/eere/renewable-energy, https://www.eia.gov/energyexplained/renewable-sources"
+		]
+	},
+	{
+		"tag": "human_brain",
+		"patterns": [
+		  "How does the human brain work?",
+		  "What is the functioning mechanism of the human brain?",
+		  "Can you explain the operational principles of the human brain?"
+		],
+		"responses": [
+		  "The human brain is a highly complex organ responsible for processing information, controlling bodily functions, and enabling cognitive functions such as thinking, learning, and memory. It consists of billions of neurons that communicate through electrical and chemical signals. These neurons form intricate networks, allowing us to perceive the world, make decisions, and perform various tasks.\nYou can find out more about this at: https://www.mayoclinic.org/brain/sls-20077047, https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain, https://www.ncbi.nlm.nih.gov/books/NBK279302/, https://www.ageuk.org.uk/information-advice/health-wellbeing/mind-body/staying-sharp/your-brain/",
+		  "The functioning of the human brain involves intricate processes such as neuron communication, synaptic connections, and the release of neurotransmitters. It's through these processes that our brain processes sensory inputs, regulates emotions, and carries out essential functions like motor control and language processing.\nYou can find out more about this at: https://www.mayoclinic.org/brain/sls-20077047, https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain, https://www.ncbi.nlm.nih.gov/books/NBK279302/, https://www.ageuk.org.uk/information-advice/health-wellbeing/mind-body/staying-sharp/your-brain/",
+		  "Understanding the human brain's operation involves exploring topics like neural pathways, brain regions, and the role of different brain structures. The brain's functionality is not only the result of electrical impulses but also influenced by factors like genetics, experience, and environment.\nYou can find out more about this at: https://www.mayoclinic.org/brain/sls-20077047, https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain, https://www.ncbi.nlm.nih.gov/books/NBK279302/, https://www.ageuk.org.uk/information-advice/health-wellbeing/mind-body/staying-sharp/your-brain/"
+		]
+	},
+	{
+		"tag": "mass and weight",
+		"patterns":["what is the difference between mass and weight", "which is constant mass or weight", "which is better standard for measurement mass or weight"],
+		"responses":["Weight is the measure of gravitational force one object has on another, and it can change based on the amount of gravity. Mass is the amount of matter in an object, and it is constant regardless of gravity, the following sources will help you to know more.... 'https://en.wikipedia.org/wiki/Mass_versus_weight','https://www.snexplores.org/article/explainer-how-do-mass-and-weight-differ','https://www.youtube.com/watch?v=HG_Z1bKs6ow','https://www.thoughtco.com/mass-and-weight-differences-606116'", "The gravitational force exerted on an object by another object is called its weight, and it varies depending on the magnitude of gravity. The quantity of matter contained in an object is called its mass, and it remains the same irrespective of gravity. find out more....'https://en.wikipedia.org/wiki/Mass_versus_weight','https://www.snexplores.org/article/explainer-how-do-mass-and-weight-differ','https://www.youtube.com/watch?v=HG_Z1bKs6ow','https://www.thoughtco.com/mass-and-weight-differences-606116'"]
+	},
+	{
+		"tag": "subatomic particle of atom",
+		"patterns":["what are the three main subatomic particle of atom","what is there inside an atom","describe atom "],
+		"responses":["The three main subatomic particles of the atom are proton, neutron, and electron. Protons and neutrons are located in the nucleus of the atom, while electrons orbit around the nucleus in shells,, find out more :),.. 'https://en.wikipedia.org/wiki/Subatomic_particle','https://www.britannica.com/science/subatomic-particle','https://content.byui.edu/file/a236934c-3c60-4fe9-90aa-d343b3e3a640/1/module2/readings/subatomic_particles.html','https://www.sciencenews.org/century/atom-matter-neutron-nuclear-power-fusion'",
+	"Atoms consist of protons, neutrons, and electrons. The nucleus contains protons (positive charge) and neutrons (no charge), while electrons (negative charge) occupy shells around it. check out more 'https://en.wikipedia.org/wiki/Subatomic_particle','https://www.britannica.com/science/subatomic-particle','https://content.byui.edu/file/a236934c-3c60-4fe9-90aa-d343b3e3a640/1/module2/readings/subatomic_particles.html','https://www.sciencenews.org/century/atom-matter-neutron-nuclear-power-fusion'"]
+	},
+	{
+		"tag":"entropy",
+		"patterns":["what is entropy","define entropy","explain distortion of matter","explain randomness"],
+		"responses":["Entropy is a scientific concept that describes the amount of disorder or randomness in a system. It is also related to the energy that is not available for doing useful work in a system. check out for more: 'https://en.wikipedia.org/wiki/Entropy','https://openstax.org/books/physics/pages/12-3-second-law-of-thermodynamics-entropy#:~:text=Entropy%20is%20a%20measure%20of,is%20available%20to%20do%20work.','https://www.youtube.com/watch?v=pltkyX2YQ14','https://www.engineersedge.com/thermodynamics/entropy.htm'",
+	"Entropy is when things go from neat to messy, like your room after a party. It also means you can’t use some of the energy in a system, like when your phone battery dies. FOLLOW FOR MORE 'https://en.wikipedia.org/wiki/Entropy','https://openstax.org/books/physics/pages/12-3-second-law-of-thermodynamics-entropy#:~:text=Entropy%20is%20a%20measure%20of,is%20available%20to%20do%20work.','https://www.youtube.com/watch?v=pltkyX2YQ14','https://www.engineersedge.com/thermodynamics/entropy.htm' "]
+		
+	},
+	{
+		"tag":"sky colour blue",
+		"patterns":["why is the sky blue","what is colour of the sky","why sky cant be red"],
+		"responses":["The sky is blue because sunlight is scattered by the air molecules in the atmosphere. Blue light is scattered more than other colors because it has a shorter wavelength and a higher frequency find out why sky has different color at dawn and dusk -- 'https://news.wisc.edu/curiosities-what-determines-the-colors-of-the-sky-at-sunrise-and-sunset/','https://www.quora.com/Why-is-the-sky-orange-and-red-at-sunrise-and-sunset','https://www.timeanddate.com/astronomy/red-sunset.html','https://spaceplace.nasa.gov/blue-sky/en/' ",
+	"The sky is blue because of the Rayleigh scattering of sunlight by the atmospheric gas molecules. Rayleigh scattering is inversely proportional to the fourth power of the wavelength, so shorter wavelengths (such as blue) are scattered more strongly than longer wavelengths (such as red),'https://news.wisc.edu/curiosities-what-determines-the-colors-of-the-sky-at-sunrise-and-sunset/','https://www.quora.com/Why-is-the-sky-orange-and-red-at-sunrise-and-sunset','https://www.timeanddate.com/astronomy/red-sunset.html','https://spaceplace.nasa.gov/blue-sky/en/'"]
+
+	},
+	{
+		"tag": "rocket_speed_fuel",
+		"patterns": ["how much is the approximate fuel consumption of a {magnitude} rocket?", "fuel consumption of a {magnitude} rocket", "approximate fuel usage for {magnitude} rocket"],
+		"responses": [{
+			"magnitude": ["high", "a lot", "lots", "too much", "huge", "quite", "significant", "extreme", "large"],
+			"response": "A high-speed rocket typically consumes around 1,000 gallons of fuel per minute."
+		  },
+		  {
+			"magnitude": ["typical", "ordinary", "normal", "fine", "just ok", "medium"],
+			"response": "A medium-speed rocket generally consumes about 500 gallons of fuel per minute."
+		  },
+		  {
+			"magnitude": ["low", "less", "little", "not much", "least", "bare", "minimum"],
+			"response": "A low-speed rocket typically uses around 200 gallons of fuel per minute."
+		  },
+		  {
+			"magnitude": "default",
+			"response": "I'm not sure about the specific fuel consumption for that speed of rocket."
+		  }
+		]
+	},
+	{
+		"tag":"earthquake strength",
+		"patterns":["how much energy is released in a {magnitude} earthquake","how much damage happens due to {magnitude} earthquake","destruction due to {magnitude} earthquake"],
+		"responses":[{
+			"magnitude":["big","large","strong","major", "massive", "giant","towering","great shock","big shock","8.0","9.0","10.0"],
+			"response": ["Big earthquakes are those that cause widespread destruction and have a magnitude of more than 7.0 on the Richter scale.  cause buildings to collapse, roads to rupture, fires to break out, landslides to occur, or tsunamis to form, and may injure or kill many people. check out for more -- 'https://en.wikipedia.org/wiki/Lists_of_earthquakes#Deadliest_earthquakes','https://en.wikipedia.org/wiki/Lists_of_earthquakes#Deadliest_earthquakes','https://www.britannica.com/list/6-deadliest-earthquakes','https://www.cdc.gov/disasters/earthquakes/during.html'"]				
+		},
+		{
+			"magnitude":["medium","normal","less strong","decent","5.0","6.0","7.0"],
+			"response":["Medium earthquakes are those that cause moderate to heavy damage and have a magnitude of 5.0 to 7.0 on the Richter scale,cause cracks in walls, broken windows, fallen chimneys, or damaged bridges, and may injure or kill some people. 'https://en.wikipedia.org/wiki/Lists_of_earthquakes#Deadliest_earthquakes','https://en.wikipedia.org/wiki/Lists_of_earthquakes#Deadliest_earthquakes','https://www.britannica.com/list/6-deadliest-earthquakes','https://www.cdc.gov/disasters/earthquakes/during.html'"]
+							
+		},
+		{
+			"magnitude":["small","light","gentle","minor","tiny","less","weak","tremble","3.0","4.0","4.9"],
+			"response":["Small earthquakes are those that cause little or no damage and have a magnitude of less than 5.0 on the Richter scale, cause some objects to fall off shelves or walls, but usually do not cause any injuries or structural damage.'https://en.wikipedia.org/wiki/Lists_of_earthquakes#Deadliest_earthquakes','https://en.wikipedia.org/wiki/Lists_of_earthquakes#Deadliest_earthquakes','https://www.britannica.com/list/6-deadliest-earthquakes','https://www.cdc.gov/disasters/earthquakes/during.html' "]
+		}
+	]
+	},
+	{
+		"tag":"republicday",
+		"patterns":["When was republic day first celebrated?","Republic day", "Why was republic day celeberated?"],
+		"responses":["Republic day was first celebrated on 26th january 1950"],
+		"context_set": "republic day"
+	},
+	{
+		"tag":"day",
+		"patterns":["what is special about the day?", "the day", "what happened on the day?"],
+		"responses":{"republic day": ["Republic day was celebrated on 26th jan 1950 because our constitution was inaugrated on that day.", "every year we celebrate republic day on 26th jan because our constitution was inaugrated on that day"], "None": ["today is the day STAI is hosted"]}
+	},
+	{
+		"tag":"electric motor",
+		"patterns":["how does electric motor work","principle of elecric motor","eletric motor and its benifits"],
+		"responses":["An electric motor converts electrical energy into mechanical energy by using the interaction of magnetic fields and electric currents. The electric current in the coil or the rotor creates a magnetic field that pushes or pulls against the magnetic field of the permanent magnet or the stator, causing the coil or the rotor to rotate find out the benifits of electric motor and more - 'https://en.wikipedia.org/wiki/Electric_motor','https://www.britannica.com/technology/electric-motor','https://www.linkedin.com/pulse/advantages-disadvantages-electric-motors','https://www.greencars.com/greencars-101/benefits-of-electric-cars'",
+	"Electric motors turn electricity into motion using magnets and coils. The coils magnetism pushes or pulls against the magnet’s magnetism, making the coil spin. the benifits of electric motor is immense find out more about it .... 'https://en.wikipedia.org/wiki/Electric_motor','https://www.britannica.com/technology/electric-motor','https://www.linkedin.com/pulse/advantages-disadvantages-electric-motors','https://www.greencars.com/greencars-101/benefits-of-electric-cars'"]
+	
+	},
+	{
+		"tag":"tesla coil",
+		"patterns": ["what is a tesla coil","priciple of tesla coil","how to conduct wireless electrcity","how does tesla coil work"],
+		"responses" :["A Tesla coil is a device that uses a high-voltage transformer and a spark gap to create high-frequency electric currents. These currents flow through a coil of wire and produce powerful magnetic fields that can light up bulbs, make sparks, or create other effects see detailed explanation... 'https://en.wikipedia.org/wiki/Tesla_coil','https://www.scienceabc.com/eyeopeners/what-is-a-tesla-coil.html','https://www.realclearscience.com/articles/2014/01/29/how_tesla_coils_work_108474.html','https://www.fi.edu/en/sparkofscience/tesla-coil-music'",
+	"Tesla coils make high-frequency electricity with a transformer and a spark gap. The electricity goes through a wire coil and makes strong magnets that can do cool things like light up bulbs or make sparks. FIND OUT MORE - 'https://en.wikipedia.org/wiki/Tesla_coil','https://www.scienceabc.com/eyeopeners/what-is-a-tesla-coil.html','https://www.realclearscience.com/articles/2014/01/29/how_tesla_coils_work_108474.html','https://www.fi.edu/en/sparkofscience/tesla-coil-music'"]
+	},
+	{
+		"tag":"forensics",
+		"patterns":["what is forensics","how does forensics help to solve crime","history of forensics"],
+		"responses":["Forensics work experience is a program that allows students to learn about the different aspects of forensic science and how it is applied in criminal investigations. It involves visiting crime labs and crime scenes, observing and participating in evidence collection and analysis, and interacting with forensic experts find out more on - 'https://www.indeed.com/career-advice/finding-a-job/forensic-science-jobs','https://www.thestudentroom.co.uk/showthread.php?t=4652456','https://artsandculture.google.com/story/forensic-science/JAXxJw56IyvEnQ?hl=en','https://en.wikipedia.org/wiki/Forensic_science'",
+	"Forensics work experience is a way to learn how forensic science helps solve crimes. It includes visiting labs and scenes, collecting and testing evidence, and talking to experts find out more about how forensics was first used 'https://www.indeed.com/career-advice/finding-a-job/forensic-science-jobs','https://www.thestudentroom.co.uk/showthread.php?t=4652456','https://artsandculture.google.com/story/forensic-science/JAXxJw56IyvEnQ?hl=en','https://en.wikipedia.org/wiki/Forensic_science'"]
+	},
+	{
+		"tag":"quantum physics",
+		"responses":["what is quantum physics","how does quantum physics work","what is the physics behind small things"],
+		"patterns":["Quantum physics is the study of the smallest units of matter and energy and how they interact with each other. It reveals the strange and surprising behavior of particles and waves that classical physics cannot explain find out more :) 'https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-physics','https://www.newscientist.com/definition/quantum-physics/','https://en.wikipedia.org/wiki/Quantum_mechanics','https://www.space.com/quantum-physics-things-you-should-know'",
+	"Quantum physics is the science of the tiny things that make up everything and how they play with each other. It shows the weird and wacky ways of bits and bobs that normal physics cant make sense of.'https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-physics','https://www.newscientist.com/definition/quantum-physics/','https://en.wikipedia.org/wiki/Quantum_mechanics','https://www.space.com/quantum-physics-things-you-should-know' "]
+
+	},
+	{
+		"tag":"stai aim",
+		"patterns":["what is the aim of stai","vision of stai","purpose of stai"],
+		"responses":["STAI aims to promote student involvement, retention and growth in the fields of science, technology and innovation. It also offers students an opportunity to investigate new concepts, delve deeper into their expertise, and stimulate their interest in the same check out for more 'https://www.indianschoolmaabela.com/stai.html','https://m.facebook.com/thearabianstories/posts/705304801614057/?locale=en_GB','https://www.scribd.com/document/651961091/Circular-STAI-2023-1','https://www.youtube.com/watch?v=z1ov1pqNqJo'",
+		"STAI is a platform for students who want to explore, expand, and enjoy science, technology and innovation. It helps them discover new ideas, deepen their skills, and spark their curiosity in these fields 'https://www.indianschoolmaabela.com/stai.html','https://m.facebook.com/thearabianstories/posts/705304801614057/?locale=en_GB','https://www.scribd.com/document/651961091/Circular-STAI-2023-1','https://www.youtube.com/watch?v=z1ov1pqNqJo'"],
+		"context_set":"stai"
+	},
+	{
+		"tag": "critera",
+		"patterns": ["what is the evaluation critera?", "what is its evaluation criteria?", "how is it evaluated?"],
+		"responses": {"stai": ["The evaulation critera of stai is originality, creativity, coding skills, problem solving skills and presentation skills"], "None": ["Evaluation critera can contain creativity, extract of content, natural expression, communication, body language etc.. depending upon the nature of the event/competition"]}
+	}
+]
+}
