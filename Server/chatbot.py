@@ -52,21 +52,29 @@ def get_response(intents_list, intents_json, user_input, context):
         if i['tag'] == tag:
             magnitude = None
             order = None
+            unknown=0
             for response in i['responses']:
+                unknown+=1
                 if 'magnitude' in response and isinstance(response, dict) == True:
                     for word in user_input.split():
-                        if any(word in synonym for synonym in response['magnitude']):
-                            magnitude = response['magnitude']
-                            break
+                        for synonym in response['magnitude']:
+                            if synonym == word:
+                                magnitude = response['magnitude']
+                                break
                     if magnitude:
+                        break
+                    if len(i['responses'])-unknown == 1:
+                        magnitude=['default']
                         break
             if magnitude:
                 if any(mag in magnitude for mag in ["high", "a lot", "lots", "too much", "huge", "quite", "significant", "extreme", "large"]):
                     order = [0, 1, 2]
                 elif any(mag in magnitude for mag in ["typical", "ordinary", "normal", "fine", "just ok", "medium"]):
-                    order = [0, 2, 1]
+                    order = [1, 2, 0]
                 elif any(mag in magnitude for mag in ["low", "less", "little", "not much", "least", "bare", "minimum"]):
                     order = [2, 1, 0]
+                else:
+                    order = [3]
                 sorted_responses = [i['responses'][idx]['response'] for idx in order]
                 result = " ".join(sorted_responses)
                 break  
@@ -79,17 +87,17 @@ def get_response(intents_list, intents_json, user_input, context):
                     context = 'None'
                 elif context != None and context != 'None':
                     if context in i['responses']:                        
-                        print(context)
+                        #print(context)
                         result = i['responses']['None']
                     else:
                         result = random.choice(i["responses"])
-                        print(i)                        
+                        #print(i)                        
                 else:
                     result = random.choice(i["responses"])
-                    print(i)
+                    #print(i)
     if not result:
         result = "I'm not sure about that."
-    print(context)
+    #print(context)
     if context == None:
         context = 'None'
     return context, result
@@ -104,7 +112,7 @@ async def server(websocket, path):
         message=message.lower()
         x+=1
         if x==1:
-                print(message)
+                #print(message)
                 filename = message+".txt"
                 savedmsg = ""
                 id=filename
@@ -117,7 +125,7 @@ async def server(websocket, path):
                         part = part.strip()
                         if part:
                             savedmsg=part
-                            print(part)
+                            #print(part)
                             await websocket.send(savedmsg)
                     await websocket.send("*-*-*END_MESSAGE*-*-*")
                 else:
@@ -127,9 +135,9 @@ async def server(websocket, path):
         elif x>1:
             ints = predict_class(message)
             recontext, res = get_response(ints,intents,message,context)
-            print(recontext)
+            #print(recontext)
             context=recontext
-            print(res)
+            #print(res)
             await websocket.send(res)
             with open(id, "a") as file:
                 file.write(message)
